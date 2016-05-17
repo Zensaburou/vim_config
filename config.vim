@@ -30,3 +30,7 @@ nnoremap <Leader>c :set cursorcolumn!<CR>
 " Change :vs and :sp behavior
 set splitbelow
 set splitright
+
+" Vim-rspec shortcuts
+map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>t :call RunCurrentSpecFile()<CR>

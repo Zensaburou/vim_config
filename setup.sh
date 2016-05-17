@@ -33,3 +33,6 @@ git clone https://github.com/kien/ctrlp.vim.git
 
 # Easily wrap text in surrounding characters (quotes, brackets, html tags, etc)
 git clone https://github.com/tpope/vim-surround.git
+
+# Rspec integration
+git clone https://github.com/thoughtbot/vim-rspec
