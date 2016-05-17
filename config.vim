@@ -20,7 +20,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-" Show tabs and spaces as chars
+" Show tabs and trailing spaces as chars
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
 " Use <SPACE> + c to highlight the cursor column
