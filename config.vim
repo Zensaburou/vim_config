@@ -11,6 +11,7 @@ let mapleader = "\<Space>"
 
 " Line numbering
 set nu
+set relativenumber
 
 " Turn off text wrapping
 set nowrap
