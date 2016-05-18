@@ -10,7 +10,6 @@ filetype plugin indent on
 let mapleader = "\<Space>"
 
 " Line numbering
-set nu
 set relativenumber
 
 " Turn off text wrapping
@@ -35,3 +34,7 @@ set splitright
 " Vim-rspec shortcuts
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>t :call RunCurrentSpecFile()<CR>
+
+" Toggle between absolute and relative numbers
+nnoremap <Leader>n :set nu<CR>
+nnoremap <Leader>N :set relativenumber<CR>
