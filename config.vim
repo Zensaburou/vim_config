@@ -33,7 +33,7 @@ set splitright
 
 " Vim-rspec shortcuts
 map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>r :call RunCurrentSpecFile()<CR>
 
 " Toggle between absolute and relative numbers
 nnoremap <Leader>n :set nu<CR>
