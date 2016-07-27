@@ -25,7 +25,8 @@ set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
 " Use <SPACE> + c to highlight the cursor column
 hi CursorColumn cterm=NONE ctermbg=235
-nnoremap <Leader>c :set cursorcolumn!<CR>
+hi CursorLine cterm=NONE ctermbg=235
+nnoremap <Leader>c :set cursorcolumn! cursorline! <CR>
 
 " Change :vs and :sp behavior
 set splitbelow
