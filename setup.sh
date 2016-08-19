@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Symlink vimrc to this repo's settings
-parent_path=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
-cd "$parent_path"
-ln -s ./config.vim ~/.vimrc
+config_file=$(cd "$(dirname "$1")"; pwd)/$(basename "$1")/config.vim
+ln -s $config_file ~/.vimrc
 
 # Create vim settings dir
 mkdir ~/.vim
@@ -14,7 +13,7 @@ git init
 git remote add origin https://github.com/tpope/vim-pathogen.git
 git pull origin master
 
-mkdir -p ~/vim/bundle
+mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/plugin
 
 cd ~/.vim/bundle
