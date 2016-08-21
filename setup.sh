@@ -1,11 +1,25 @@
 #!/bin/bash
 
-# Symlink vimrc to this repo's settings
-config_file=$(cd "$(dirname "$1")"; pwd)/$(basename "$1")/config.vim
-ln -s $config_file ~/.vimrc
-
 # Create vim settings dir
 mkdir ~/.vim
+mkdir -p ~/.vim/ftdetect
+mkdir -p ~/.vim/after
+mkdir -p ~/.vim/after/ftplugin
+mkdir -p ~/.vim/bundle
+mkdir -p ~/.vim/plugin
+
+# Symlink config files
+app_dir=$(cd "$(dirname "$1")"; pwd)/$(basename "$1")
+
+# Vimrc
+ln -s $app_dir/config.vim ~/.vimrc
+
+# Language-specific settings
+ln -s $app_dir/vim/after/ftplugin/ruby.vim ~/.vim/after/ftplugin/ruby.vim
+ln -s $app_dir/vim/after/ftplugin/rust.vim ~/.vim/after/ftplugin/rust.vim
+
+# Custom language detection
+ln -s $app_dir/vim/ftdetect/rust.vim ~/.vim/ftdetect/rust.vim
 
 # Pathogen package manager
 cd ~/.vim
@@ -13,10 +27,9 @@ git init
 git remote add origin https://github.com/tpope/vim-pathogen.git
 git pull origin master
 
-mkdir -p ~/.vim/bundle
-mkdir -p ~/.vim/plugin
-
 cd ~/.vim/bundle
+
+# Install third-party plugins
 
 # Line indentation markers
 git clone https://github.com/Yggdroot/indentLine.git

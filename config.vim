@@ -15,10 +15,12 @@ set relativenumber
 " Turn off text wrapping
 set nowrap
 
-" Set tabs to two spaces
+" Convert tabs to spaces
 set expandtab
-set tabstop=2
-set shiftwidth=2
+
+" Set default tab to four spaces
+set shiftwidth=4
+set tabstop=4
 
 " Show tabs and trailing spaces as chars
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
