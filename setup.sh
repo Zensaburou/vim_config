@@ -16,10 +16,6 @@ ln -s $app_dir/config.vim ~/.vimrc
 
 # Language-specific settings
 ln -s $app_dir/vim/after/ftplugin/ruby.vim ~/.vim/after/ftplugin/ruby.vim
-ln -s $app_dir/vim/after/ftplugin/rust.vim ~/.vim/after/ftplugin/rust.vim
-
-# Custom language detection
-ln -s $app_dir/vim/ftdetect/rust.vim ~/.vim/ftdetect/rust.vim
 
 # Pathogen package manager
 cd ~/.vim
@@ -51,3 +47,6 @@ git clone git@github.com:vim-scripts/AutoClose.git
 
 # Rspec integration
 git clone https://github.com/thoughtbot/vim-rspec
+
+# Official rust config
+git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
