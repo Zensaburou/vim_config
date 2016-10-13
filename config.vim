@@ -41,3 +41,6 @@ map <Leader>r :call RunCurrentSpecFile()<CR>
 " Toggle between absolute and relative numbers
 nnoremap <Leader>n :set nu<CR>
 nnoremap <Leader>N :set relativenumber<CR>
+
+" Switch to previously edited buffer"
+nnoremap <Leader>b :b#<CR>
