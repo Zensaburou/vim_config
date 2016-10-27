@@ -44,3 +44,7 @@ nnoremap <Leader>N :set relativenumber<CR>
 
 " Switch to previously edited buffer"
 nnoremap <Leader>b :b#<CR>
+
+" Scroll up and down
+nnoremap <Leader>u <C-u>
+nnoremap <Leader>d <C-d>
