@@ -34,6 +34,16 @@ nnoremap <Leader>c :set cursorcolumn! cursorline! <CR>
 set splitbelow
 set splitright
 
+" Navigating splits
+nnoremap <Leader>h <C-W><C-H>
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+
+" Opening splits
+nnoremap <Leader>s :sp<CR>
+nnoremap <Leader>v :vs<CR>
+
 " Vim-rspec shortcuts
 map <Leader>t :call RunAllSpecs()<CR>
 map <Leader>r :call RunCurrentSpecFile()<CR>
