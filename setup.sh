@@ -16,6 +16,7 @@ ln -s $app_dir/config.vim ~/.vimrc
 
 # Language-specific settings
 ln -s $app_dir/vim/after/ftplugin/ruby.vim ~/.vim/after/ftplugin/ruby.vim
+ln -s $app_dir/vim/after/ftplugin/yaml.vim ~/.vim/after/ftplugin/yaml.vim
 
 # Pathogen package manager
 cd ~/.vim
