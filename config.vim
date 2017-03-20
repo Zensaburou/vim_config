@@ -58,3 +58,6 @@ nnoremap <Leader>b :b#<CR>
 " Scroll up and down
 nnoremap <Leader>u <C-u>
 nnoremap <Leader>d <C-d>
+
+" Copy current file path to clipboard (uses pbcopy)"
+nnoremap <Leader>f :!echo -n % \| pbcopy<CR>
