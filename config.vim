@@ -9,8 +9,8 @@ filetype plugin indent on
 " Set leader key to space
 let mapleader = "\<Space>"
 
-" Line numbering
-set relativenumber
+" Hybrid line numbering
+set rnu nu
 
 " Turn off text wrapping
 set nowrap
@@ -26,8 +26,8 @@ set tabstop=4
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
 " Use <SPACE> + c to highlight the cursor column
-hi CursorColumn cterm=NONE ctermbg=235
-hi CursorLine cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=237
+hi CursorLine cterm=NONE ctermbg=237
 nnoremap <Leader>c :set cursorcolumn! cursorline! <CR>
 
 " Change :vs and :sp behavior

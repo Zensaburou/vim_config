@@ -29,9 +29,6 @@ cd ~/.vim/bundle
 
 # Install third-party plugins
 
-# Line indentation markers
-git clone https://github.com/Yggdroot/indentLine.git
-
 # Add end statements to ruby code
 git clone git://github.com/tpope/vim-endwise.git
 
