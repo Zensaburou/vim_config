@@ -10,7 +10,7 @@ filetype plugin indent on
 let mapleader = "\<Space>"
 
 " Hybrid line numbering
-set rnu nu
+set nu rnu
 
 " Turn off text wrapping
 set nowrap
