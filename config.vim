@@ -64,3 +64,8 @@ nnoremap <Leader>f :!echo -n % \| pbcopy<CR>
 
 " Use ctrl + l to exit insert mode
 inoremap <C-l> <Esc>
+
+" Use the_silver_searcher for ctrl p searches
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
