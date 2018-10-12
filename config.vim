@@ -15,9 +15,6 @@ set nu rnu
 " Turn off text wrapping
 set nowrap
 
-" Convert tabs to spaces
-set expandtab
-
 " Set default tab to four spaces
 set shiftwidth=4
 set tabstop=4
