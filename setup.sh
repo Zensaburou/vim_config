@@ -17,7 +17,6 @@ ln -s $app_dir/config.vim ~/.vimrc
 # Language-specific settings
 ln -s $app_dir/vim/after/ftplugin/ruby.vim ~/.vim/after/ftplugin/ruby.vim
 ln -s $app_dir/vim/after/ftplugin/yaml.vim ~/.vim/after/ftplugin/yaml.vim
-ln -s $app_dir/vim/after/ftplugin/clojure.vim ~/.vim/after/ftplugin/clojure.vim
 
 # Pathogen package manager
 cd ~/.vim
@@ -47,14 +46,5 @@ git clone git@github.com:vim-scripts/AutoClose.git
 # Rspec integration
 git clone https://github.com/thoughtbot/vim-rspec
 
-# Official rust config
-git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
-
-# Official rust config
-git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
-
-# Color match parentheses
-git clone --depth=1 git@github.com:kien/rainbow_parentheses.vim.git
-
-# Clojure syntax highlighting
-git clone --depth=1 git@github.com:guns/vim-clojure-static.git
+# C Syntax highlighting
+git clone git@github.com:justinmk/vim-syntax-extra.git
