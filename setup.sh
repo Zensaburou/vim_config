@@ -48,3 +48,7 @@ git clone https://github.com/thoughtbot/vim-rspec
 
 # C Syntax highlighting
 git clone git@github.com:justinmk/vim-syntax-extra.git
+
+# Golang utils
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+
