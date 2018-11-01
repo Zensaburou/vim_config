@@ -66,3 +66,6 @@ inoremap <C-l> <Esc>
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" Vim-go auto-imports in addition to linting on save
+let g:go_fmt_command = "goimports"
