@@ -65,3 +65,6 @@ endif
 
 " Vim-go auto-imports in addition to linting on save
 let g:go_fmt_command = "goimports"
+"
+" Run linter on saving a python file
+autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
