@@ -53,7 +53,7 @@ nnoremap <Leader>u <C-u>
 nnoremap <Leader>d <C-d>
 
 " Copy current file path to clipboard (uses pbcopy)
-nnoremap <Leader>f :!echo -n % \| pbcopy<CR>
+nnoremap <Leader>f :silent !echo -n % \| pbcopy<CR>:redr!<CR>
 
 " Use ctrl + l to exit insert mode
 inoremap <C-l> <Esc>
