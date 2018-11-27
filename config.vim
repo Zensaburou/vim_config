@@ -27,10 +27,6 @@ hi CursorColumn cterm=NONE ctermbg=237
 hi CursorLine cterm=NONE ctermbg=237
 nnoremap <Leader>c :set cursorcolumn! cursorline! <CR>
 
-" Change :vs and :sp behavior
-set splitbelow
-set splitright
-
 " Navigating splits
 nnoremap <Leader>h <C-W><C-H>
 nnoremap <Leader>j <C-W><C-J>
