@@ -70,8 +70,12 @@ endif
 let g:go_fmt_command = "goimports"
 
 " Run linter on saving a python file
-autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
+" autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
+autocmd BufWritePost *.py silent exec '!autopep8 --in-place --aggressive --aggressive %' | silent redraw!
 
 " Run linter on saving a ruby file
 " autocmd BufWritePost *.rb silent exec '!rubocop --safe-auto-correct %' | silent redraw!
 map <Leader>; :silent !rubocop --safe-auto-correct %<CR>:redr!<CR>
+
+" Running shell commands
+map <Leader>e :!
