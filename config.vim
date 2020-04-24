@@ -30,6 +30,9 @@ hi CursorColumn cterm=NONE ctermbg=237
 hi CursorLine cterm=NONE ctermbg=237
 nnoremap <Leader>c :set cursorcolumn! cursorline! <CR>
 
+" Replace all occurrances of word under cursor
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+
 " Navigating splits
 nnoremap <Leader>h <C-W><C-H>
 nnoremap <Leader>j <C-W><C-J>
@@ -42,7 +45,7 @@ nnoremap <Leader>v :vs<CR>
 
 " Vim-rspec shortcuts
 map <Leader>t :call RunAllSpecs()<CR>
-map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>a :call RunCurrentSpecFile()<CR>
 
 " Toggle between absolute and relative numbers
 nnoremap <Leader>n :set nu<CR>
