@@ -6,6 +6,7 @@ set shell=zsh
 
 " Basic syntax highlighting
 syntax on
+colo desert
 
 filetype plugin indent on
 
@@ -61,6 +62,9 @@ nnoremap <Leader>d <C-d>
 " Copy current file path to clipboard (uses pbcopy)
 nnoremap <Leader>f :silent !echo -n % \| pbcopy<CR>:redr!<CR>
 
+" Open current file in github
+nnoremap <Leader>go :silent ! echo -n %:p \| sed 's/.*apps\/wyzant/https:\/\/repos.wyzdev.com\//' \| sed 's/\//\/blob\/master\//6' \| xargs open<CR>:redr!<CR>
+
 " Use ctrl + l to exit insert mode
 inoremap <C-l> <Esc>
 
@@ -78,6 +82,8 @@ autocmd BufWritePost *.py silent exec '!autopep8 --in-place --aggressive --aggre
 
 " Run linter on saving a ruby file
 " autocmd BufWritePost *.rb silent exec '!rubocop --safe-auto-correct %' | silent redraw!
+
+" Run linter
 map <Leader>; :silent !rubocop --safe-auto-correct %<CR>:redr!<CR>
 
 " Running shell commands
