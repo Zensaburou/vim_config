@@ -46,7 +46,6 @@ nnoremap <Leader>v :vs<CR>
 
 " Vim-rspec shortcuts
 map <Leader>t :call RunAllSpecs()<CR>
-map <Leader>a :call RunCurrentSpecFile()<CR>
 
 " Toggle between absolute and relative numbers
 nnoremap <Leader>n :set nu<CR>
