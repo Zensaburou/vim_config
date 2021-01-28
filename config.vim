@@ -62,7 +62,7 @@ nnoremap <Leader>d <C-d>
 nnoremap <Leader>f :silent !echo -n % \| pbcopy<CR>:redr!<CR>
 
 " Open current file in github
-nnoremap <Leader>go :silent ! echo -n %:p \| sed 's/.*apps\/wyzant/https:\/\/repos.wyzdev.com\//' \| sed 's/\//\/blob\/master\//6' \| xargs open<CR>:redr!<CR>
+nnoremap <Leader>go :silent ! echo -n %:p \| sed 's/.*apps\/github/https:\/\/github.com\//' \| sed 's/\//\/blob\/master\//6' \| xargs open<CR>:redr!<CR>
 
 " Use ctrl + l to exit insert mode
 inoremap <C-l> <Esc>
