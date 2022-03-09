@@ -75,12 +75,15 @@ endif
 " Vim-go auto-imports in addition to linting on save
 let g:go_fmt_command = "goimports"
 
-" Run linter on saving a python file
-" autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
-autocmd BufWritePost *.py silent exec '!autopep8 --in-place --aggressive --aggressive %' | silent redraw!
-
 " Run linter on saving a ruby file
-" autocmd BufWritePost *.rb silent exec '!rubocop --safe-auto-correct %' | silent redraw!
+augroup vimrc_autocmd
+	autocmd!
+	autocmd BufWritePost *.rb silent exec '!rubocop --safe-auto-correct %' | silent redraw!
+
+	" Run linter on saving a python file
+	" autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
+	autocmd BufWritePost *.py silent exec '!autopep8 --in-place --aggressive --aggressive %' | silent redraw!
+augroup END
 
 " Run linter
 map <Leader>; :silent !rubocop --safe-auto-correct %<CR>:redr!<CR>

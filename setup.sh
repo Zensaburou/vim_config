@@ -44,11 +44,10 @@ git clone https://github.com/tpope/vim-surround.git
 git clone git@github.com:vim-scripts/AutoClose.git
 
 # Rspec integration
-git clone https://github.com/thoughtbot/vim-rspec
+# git clone https://github.com/thoughtbot/vim-rspec
 
 # C Syntax highlighting
-git clone git@github.com:justinmk/vim-syntax-extra.git
+# git clone git@github.com:justinmk/vim-syntax-extra.git
 
 # Golang utils
-git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-
+# git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
