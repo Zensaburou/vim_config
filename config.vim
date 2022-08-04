@@ -26,6 +26,11 @@ set tabstop=4
 " Show tabs and trailing spaces as chars
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
+" Optimizations for working in ruby due to slow regexp syntax highlighting
+set ttyfast
+set lazyredraw
+set regexpengine=1
+
 " Use <SPACE> + c to highlight the cursor column
 hi CursorColumn cterm=NONE ctermbg=237
 hi CursorLine cterm=NONE ctermbg=237
@@ -64,6 +69,13 @@ nnoremap <Leader>f :silent !echo -n % \| pbcopy<CR>:redr!<CR>
 " Open current file in github
 nnoremap <Leader>go :silent ! echo -n %:p \| sed 's/.*apps\/github/https:\/\/github.com\//' \| sed 's/\//\/blob\/master\//6' \| xargs open<CR>:redr!<CR>
 
+"function FileAndLine()
+"	let stem = expand("%:p") . '#L' . line(".")
+"	echo stem
+"	let partial_url = system("sed 's/.*apps\/github/https:\/\/github.com\//'",stem)
+"	echo partial_url
+"endfunction
+
 " Use ctrl + l to exit insert mode
 inoremap <C-l> <Esc>
 
@@ -78,7 +90,7 @@ let g:go_fmt_command = "goimports"
 " Run linter on saving a ruby file
 augroup vimrc_autocmd
 	autocmd!
-	autocmd BufWritePost *.rb silent exec '!rubocop --safe-auto-correct %' | silent redraw!
+	autocmd BufWritePost *.rb silent exec '!bundle exec rubocop --safe-auto-correct %' | silent redraw!
 
 	" Run linter on saving a python file
 	" autocmd BufWritePost *.py silent exec '!black %' | silent redraw!
@@ -86,7 +98,8 @@ augroup vimrc_autocmd
 augroup END
 
 " Run linter
-map <Leader>; :silent !rubocop --safe-auto-correct %<CR>:redr!<CR>
+""map <Leader>; :silent !rubocop --safe-auto-correct %<CR>:redr!<CR>
+map <Leader>; :silent !bundle exec rubocop --safe-auto-correct %<CR>:redr!<CR>
 
 " Running shell commands
 map <Leader>e :!
